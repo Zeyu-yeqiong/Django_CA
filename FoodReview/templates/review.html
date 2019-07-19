@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="VANNO - Premium directory consumer reviews and listings template by Ansonika">
+    <meta name="author" content="Ansonika">
+    <title>VANNO | Premium directory consumer reviews and listings template by Ansonika. - SHARED ON BOOTSTRAPMB.COM</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="../static/img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="../static/img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="../static/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="../static/img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+	<link href="../static/css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="../static/css/custom.css" rel="stylesheet">
+
+</head>
+<header class="header menu_fixed">
+		<ul id="top_menu">
+			<li><a href="" class="btn_top">Hi,{{username}}</a></li>
+		</ul>
+	</header>
+<body>
+	
+	<div id="page">
+	<main>
+		<div class="reviews_summary">
+			<div class="wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<figure>
+								<img src="{{res_inf.picture}}" alt="">
+							</figure>
+							<h1>{{res_inf.name}}</h1>
+							<span class="rating"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star empty"></i><em>4.00/5.00 -{{res_inf.description}}</em></span>
+						</div>
+						<li><a href="../writereview?res_id={{res_inf.id}}" class="btn_top">Write a Review</a></li>
+					</div>
+				</div>
+				<!-- /container -->
+			</div>
+		</div>
+		<!-- /reviews_summary -->
+
+
+
+
+
+		
+		<div class="container margin_60_35">
+			<div class="row">
+				<div class="col-lg-8">
+					{% for i in review1 %}
+					<div class="review_card">
+						<div class="row">
+							<div class="col-md-2 user_info">
+								<h3>{{i.name}}</h3>
+							</div>
+							<div class="col-md-10 review_content">
+								<div class="clearfix add_bottom_15">
+									<span class="rating"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><em>{{i.start}}/5.00</em></span>
+									<em>Published  {{i.time}}</em>
+								</div>
+								<h4>"{{i.scontent}}"</h4>
+								<p>{{i.content}}</p>
+								<ul>
+									<li><a href="#0"><i class="icon_like_alt"></i><span>Useful</span></a></li>
+									<li><a href="#0"><i class="icon_dislike_alt"></i><span>Not useful</span></a></li>
+								</ul>
+							</div>
+						</div>
+
+						{%for k in review2%}
+						{% if k.subid == i.id %}
+
+					
+						<div class="row reply">
+							<div class="col-md-2 user_info">
+							</div>
+							<div class="col-md-10">
+								<div class="review_content">
+									<strong>{{k.name}}    reply  :</strong>
+									<em>{{k.time}}</em>
+									<p><br>{{k.scontent}}<br><br>{{k.content}}</p>
+								</div>
+							</div>
+						</div>
+						{% endif %}
+						{% endfor %}	<li><a href="../writereview?res_id={{res_inf.id}}&id={{i.id}}" class="btn_top">Reply</a></li>
+					</div>
+					{% endfor %}
+
+					
+				</div>
+				<!-- /col -->
+				<div class="col-lg-4">
+					<div class="box_general company_info">
+						<h3>{{res_inf.name}}</h3>
+						<p>The light aroma arrived before the bowl, and while the soup looked slightly clear, it was surprisingly flavourful underlying with taste of herbs and spices that didn’t overpower the rest.
+Compared to other beef noodle soups that are more robust (especially if you order a ”hong shao”), this had a cleaner, pleasing taste that was still complex and appetising.
+								The stock is said to be cooked over 20 hours, using beef bones and a secret blend of herbs.
+								As for the side dishes, the must-order is recommended to be the “Hua Gan” (NT$40) – dried tofu cooked in beef stock. Lin Dong Fang Beef Noodles 林東芳牛肉麵 (Zhongshan District, Taipei)g eos an. Mucius doctus constituto pri at, ne cetero postulant pro. At vix utinam corpora, ea oblique moderatius usu. Vix id viris consul honestatis, an constituto deterruisset consectetuer pro.</p>
+						<p><strong>Address</strong><br>115684 Baker st. 567<br>Los Angeles - SG</p>
+						<p><strong>Website</strong><br><a href="#0">www.good.com</a></p>
+						<p><strong>Email</strong><br><a href="#0">info@good.com</a></p>
+						<p><strong>Telephone</strong><br>+65 423 565624</p>
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+		
+	</main>
+	<!--/main-->
+	
+	</div>
+	<!-- page -->
+	
+	
+	<!-- COMMON SCRIPTS -->
+    <script src="../static/js/common_scripts.js"></script>
+	<script src="../static/js/functions.js"></script>
+	<script src="../static/assets/validate.js"></script>
+
+</body>
+</html>
