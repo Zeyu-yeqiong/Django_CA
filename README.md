@@ -1,7 +1,8 @@
-# Audio generation system 
+Here is our Django CA
 
-Audio generation system is used for music generation.We want to generate different style or speed music.
+Admin ID:zeyu
+Admin Password:zeyu
 
-There are two choice for music generation, Conditional-GAN or Unconditional-GAN.
 
-Unlike other project,both generator and discriminator are 3D-CNN network.
+User ID:shiyu
+User Password:shiyu
